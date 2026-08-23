@@ -80,3 +80,6 @@ the following files are generated:
 ├── paper-rec.json
 └── <images extracted by Marker>
 ```
+
+## TODO:
+- [ ] add skip option when folder o subfolders are being processed to avoid stopping full folder extraction if there is some PDF files that hasn't be proceesed yet.
