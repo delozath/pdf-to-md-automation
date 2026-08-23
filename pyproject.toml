@@ -14,8 +14,17 @@ dependencies = [
     "pyperclip",
 ]
 
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+]
+
 [project.scripts]
 pdf-marker-transcriber = "pdf_marker_transcriber.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/pdf_marker_transcriber"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
