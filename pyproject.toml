@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdf-marker-transcriber"
+version = "0.1.0"
+description = "PDF transcription to Markdown, JSON, and extracted images using Marker."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "hydra-core",
+    "marker-pdf",
+    "pyperclip",
+]
+
+[project.scripts]
+pdf-marker-transcriber = "pdf_marker_transcriber.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pdf_marker_transcriber"]
